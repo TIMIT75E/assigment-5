@@ -1,10 +1,13 @@
-const changeColor = ["green", "blue", "#3752FD", "#63f0f4", "#4cb7ba", "#4ca8ba"];
+const changeColor = ["#4555f4", "#7884f7", "#3752FD", "#63f0f4", "#4cb7ba", "#4ca8ba","#00b4fd"];
 let index = 0;
 
 document.getElementById("theme-btn").addEventListener("click", function () {
     document.getElementById("body").style.background = changeColor[index];
     index = (index + 1) % changeColor.length
 });
+
+
+
 
 function updateTask () {
     let taskNum = document.getElementById("task-num").innerText;
@@ -24,6 +27,8 @@ function updateTask () {
     }
 }
 
+
+
 function addCartItems(butttonId, cartId) {
     const button = document.getElementById(butttonId);
     button.addEventListener("click", function () {
@@ -36,15 +41,13 @@ function addCartItems(butttonId, cartId) {
             "bg-[#F4F7FF]",   
             "p-3",           
             "rounded-lg",    
-            "border"        
-              
+            "border"              
         );
         document.getElementById("cart-cointainer").appendChild(newElement);
-        document.getElementById(butttonId).disabled = true;
-        
-        
+        document.getElementById(butttonId).disabled = true;   
     })
 }
+
 
 
 addCartItems("item-1", "cart-1");
