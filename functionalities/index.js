@@ -17,7 +17,7 @@ function addCartItems(butttonId, cartId) {
         newElement.textContent = `You have Complete The Task ${cart1.textContent} at : ${times}`;
         document.getElementById("cart-cointainer").appendChild(newElement);
         document.getElementById(butttonId).disabled = true;
-        alert("Bord Update Successfully")
+        alert("Bord Update Successfully");
     })
 }
 
@@ -31,6 +31,11 @@ addCartItems("item-6", "cart-6");
 
 
 
+
+
+document.getElementById("clear-btn").addEventListener("click", function(){
+    document.getElementById("cart-cointainer").innerHTML = "";
+})
 
 
 
